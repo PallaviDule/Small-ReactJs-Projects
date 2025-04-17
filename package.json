@@ -1,0 +1,29 @@
+{
+  "name": "small-reactjs-projects",
+  "version": "1.0.0",
+  "description": "This project has multiple reactJs app.",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PallaviDule/Small-ReactJs-Projects.git"
+  },
+  "author": "Pallavi Dule",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PallaviDule/Small-ReactJs-Projects/issues"
+  },
+  "homepage": "https://github.com/PallaviDule/Small-ReactJs-Projects#readme"
+}
