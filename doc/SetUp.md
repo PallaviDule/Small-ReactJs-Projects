@@ -38,7 +38,7 @@ Parcel starts from your HTML file. Use this command to run the project:
 
     - The `"main"` field is meant for libraries, not apps.
     - Parcel doesn't use `main` because it starts from `index.html`, not `index.js`.
-    - It scans the `<script type="module" src="src/index.js">` in index.html and builds from there.
+    - It scans the `<script type="module" src="src/index.js">` in [index.html](./index.html.md) and builds from there.
 
 6. Add a start script in `package.json`
     ```json
