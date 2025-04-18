@@ -19,18 +19,18 @@ const UseMemoDemo = () => {
   }, [count]);
 
   return (
-    <div className={`my-4 m-auto p-4 w-100 h-100 border border-blue-200 text-center bg-blue-100 rounded-2xl ${otherState ? 'bg-black text-white': ''}`}>
+    <div className={`my-4 m-auto p-4 w-100 h-100 border border-blue-200 text-center rounded-2xl ${otherState ? 'bg-gray-700 text-white': 'bg-blue-100'}`}>
       <h1 className="text-xl mb-4 border-b border-b-blue-800">useMemo() Demo</h1>
 
       <div className="mb-4">
         <button
-          className="px-4 py-2 bg-blue-300 text-white rounded"
+          className="px-4 py-2 bg-blue-300 border border-blue-800 rounded-xl m-2"
           onClick={() => setCount(count + 1)}
         >
           Increment Count
         </button>
         <button
-          className="px-4 py-2 bg-green-900 text-white rounded"
+          className="px-4 py-2  bg-blue-300 border border-blue-800 rounded-xl m-2"
           onClick={() => setOtherState(!otherState)}
         >
           Toggle Theme
