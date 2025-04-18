@@ -1,11 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Layout from './component/MainComponent/Layout';
-import PageNotFound from './component/MainComponent/PageNotFound';
-import Body from './component/MainComponent/Body';
+import Layout from './component/mainComponent/Layout';
+import PageNotFound from './component/mainComponent/PageNotFound';
+import Body from './component/mainComponent/Body';
 import TicTacToe from './component/TicTacToe/TicTacToe';
 import UseMemoDemo from './component/UseMemoDemo/UseMemoDemo';
+import PageNotFound from './component/mainComponent/PageNotFound';
 import './index.css';
+import UseRefDemo from './component/useRefDemo/UseRefDemo';
 
 const App = () => {
   return (
@@ -15,6 +17,7 @@ const App = () => {
           <Route index element={<Body />} />
           <Route path="ticTacToe" element={<TicTacToe />} />
           <Route path="useMemoDemo" element={<UseMemoDemo />} />
+          <Route path="useRefDemo" element={<UseRefDemo />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
