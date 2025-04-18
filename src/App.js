@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './index.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Layout from './component/mainComponent/Layout';
 import PageNotFound from './component/mainComponent/PageNotFound';
@@ -6,8 +7,7 @@ import Body from './component/mainComponent/Body';
 import TicTacToe from './component/TicTacToe/TicTacToe';
 import UseMemoDemo from './component/UseMemoDemo/UseMemoDemo';
 import PageNotFound from './component/mainComponent/PageNotFound';
-import './index.css';
-import UseRefDemo from './component/useRefDemo/UseRefDemo';
+import UseRefDemo from './component/useRefDemo/useRefDemo';
 
 const App = () => {
   return (
