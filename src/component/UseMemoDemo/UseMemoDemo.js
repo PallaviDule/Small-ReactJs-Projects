@@ -19,12 +19,12 @@ const UseMemoDemo = () => {
   }, [count]);
 
   return (
-    <div className={`p-4 text-center w-auto ${otherState ? 'bg-black text-white': ''}`}>
-      <h1 className="text-xl mb-4">useMemo() Demo</h1>
+    <div className={`my-4 m-auto p-4 w-100 h-100 border border-blue-200 text-center bg-blue-100 rounded-2xl ${otherState ? 'bg-black text-white': ''}`}>
+      <h1 className="text-xl mb-4 border-b border-b-blue-800">useMemo() Demo</h1>
 
       <div className="mb-4">
         <button
-          className="px-4 py-2 bg-blue-600 text-white rounded mr-2"
+          className="px-4 py-2 bg-blue-300 text-white rounded"
           onClick={() => setCount(count + 1)}
         >
           Increment Count

@@ -20,7 +20,7 @@ const UseRefDemo = () => {
     console.log('Component Re-Rendering');
 
     return (
-    <div className='my-2 p-2 w-100 h-100 m-auto border border-blue-200 text-center bg-blue-100 rounded-2xl'>
+    <div className='my-4 m-auto p-4 w-100 h-100 border border-blue-200 text-center bg-blue-100 rounded-2xl'>
         <h1 className="text-xl mb-4  border-b border-b-blue-800">useRef() Demo</h1>
         <button 
             onClick={handleIncreaseX}
@@ -36,7 +36,7 @@ const UseRefDemo = () => {
         >
             Increase Y
         </button>
-        <h2>Let Y = {yValue}</h2>
+        <h2> Y = {yValue}</h2>
 
         <button 
             onClick={handleIncreaseRef}
@@ -44,7 +44,7 @@ const UseRefDemo = () => {
         >
             Increase Ref
         </button>
-        <h2>Let ref = {ref.current}</h2>
+        <h2>ref = {ref.current}</h2>
     </div>
 )
 };

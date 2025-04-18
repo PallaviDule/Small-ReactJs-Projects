@@ -5,9 +5,9 @@ import Layout from './component/mainComponent/Layout';
 import PageNotFound from './component/mainComponent/PageNotFound';
 import Body from './component/mainComponent/Body';
 import TicTacToe from './component/TicTacToe/TicTacToe';
-import UseMemoDemo from './component/UseMemoDemo/UseMemoDemo';
+import UseMemoDemo from './component/useMemoDemo/UseMemoDemo';
 import PageNotFound from './component/mainComponent/PageNotFound';
-import UseRefDemo from './component/useRefDemo/useRefDemo';
+import UseRefDemo from './component/useRefDemo/UseRefDemo';
 
 const App = () => {
   return (
