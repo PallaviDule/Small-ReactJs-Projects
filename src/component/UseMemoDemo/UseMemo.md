@@ -6,6 +6,7 @@ This example demonstrates how `useMemo()` can be used to **optimize performance*
 - When your React component re-renders, all the functions inside it get executed again — even expensive ones. If that heavy computation doesn't need to run every time, `useMemo()` helps you **cache** the result **until the dependencies change**.
 
 ### What This Demo Does
+- [Code](./UseMemoDemo.js)
 - Simulates a slow function (`slowFunction`) that mimics an expensive calculation.
 - Uses `useMemo()` to only recalculate the result when the `count` changes.
 - Includes a second button (`Toggle Other State`) to show how `useMemo()` avoids recalculating when unrelated state changes.
