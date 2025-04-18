@@ -20,11 +20,11 @@ We are building this project **from scratch**, without using a project generator
     npm install react react-dom
     ```
 4. Set up Tailwind CSS  
-Follow [Parcel’s Tailwind setup guide here](https://parceljs.org/recipes/react/#tailwind-css)
+Follow [Parcel’s Tailwind setup guide here](https://tailwindcss.com/docs/installation/framework-guides/parcel)
 
     > **Summary:**
-    > - Install Tailwind, PostCSS  
-    > - Create `tailwind.config.js` and `postcss.config.js`  
+    > - `npm install tailwindcss @tailwindcss/postcss` 
+    > - Create `.postcssrc`  
     > - Add Tailwind directives in your `index.css`  
     > - Import `index.css` in your React entry file
 
@@ -56,7 +56,8 @@ Ignore folders that shouldn't be committed:
     .parcel-cache
     .env
     ```
-### 8. Connect to GitHub : If you are creating your own new project
+
+## Connect to GitHub : If you are creating your own new project
 1. Initialize Git (if not already):
 
     ```bash
