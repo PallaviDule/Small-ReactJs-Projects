@@ -23,6 +23,7 @@ const Body = () => {
         <div style={tabStyle}><Link to='/ticTacToe'>Tic Tac Toe</Link></div>
         <div style={tabStyle}><Link to='/useMemoDemo'>useMemo Demo</Link></div>
         <div style={tabStyle}><Link to='/useRefDemo'>useRef Demo</Link></div>
+        <div style={tabStyle}><Link to='/romanToInteger'>Roman To Integer</Link></div>
     </div>
   )
 }

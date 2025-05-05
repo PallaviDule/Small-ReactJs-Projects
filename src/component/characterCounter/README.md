@@ -1,0 +1,1 @@
+https://charactercounter.com/count-characters-in-javascript

@@ -8,6 +8,7 @@ import TicTacToe from './component/TicTacToe/TicTacToe';
 import UseMemoDemo from './component/useMemoDemo/UseMemoDemo';
 import PageNotFound from './component/mainComponent/PageNotFound';
 import UseRefDemo from './component/useRefDemo/UseRefDemo';
+import RomanToInteger from './component/romanToInteger/RomanToInteger';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
           <Route index element={<Body />} />
           <Route path="ticTacToe" element={<TicTacToe />} />
           <Route path="useMemoDemo" element={<UseMemoDemo />} />
-          <Route path="useRefDemo" element={<UseRefDemo />} />
+          <Route path="useRefDemo" element={<UseRefDemo />} />          
+          <Route path="romanToInteger" element={<RomanToInteger />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

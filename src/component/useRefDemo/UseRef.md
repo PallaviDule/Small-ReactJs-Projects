@@ -2,7 +2,7 @@
 This example demonstrates how the `useRef()` hook can be used to **persist values across renders** without causing the component to re-render.
 
 ### Why use `useRef()`?
-- `useRef()` lets you keep a **mutable value** that doesn't trigger a re-render when it changes.
+- [`useRef()`](https://react.dev/reference/react/useRef) lets you keep a **mutable value** that doesn't trigger a re-render when it changes.
 - It’s perfect for things like:
   - Storing timer IDs
   - Keeping previous values
