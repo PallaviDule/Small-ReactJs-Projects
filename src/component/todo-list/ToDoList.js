@@ -43,7 +43,7 @@ const ToDoList = () => {
 
   return (
     <div className='todo-container'>
-          <div className="todo-header">ToDoList</div>
+          <div className="todo-header">ToDo List</div>
           <div className='grid grid-flow-col'>
             <div className='col-span-1 m-3'>
               <ul>
