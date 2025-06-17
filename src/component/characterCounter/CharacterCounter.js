@@ -1,8 +1,9 @@
 import React from 'react'
+import { componentMainDivStyle } from '../../css-class-constant/component-style'
 
 const CharacterCounter = () => {
   return (
-    <div className='m-auto w-5/12 border border-blue-200 bg-blue-100 my-4 '>
+    <div className={componentMainDivStyle}>
         <label className='font-bold text-center border-b border-b-blue-800'>Character Counter</label>
     </div>
   )

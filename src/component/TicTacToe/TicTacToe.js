@@ -1,11 +1,11 @@
 import React from 'react';
 import Board from './Board';
-
+import { componentMainDivStyle } from '../../css-class-constant/component-style';
 
 const TicTacToe = () => {
   return (
-    <div className='m-auto my-4 w-5/12 border border-blue-200 bg-blue-100 text-center'>
-      <label> Tic Tac Toe</label>
+    <div className={componentMainDivStyle}>
+      <label className='text-xl font-bold'> Tic Tac Toe</label>
       <Board />
     </div>
   )

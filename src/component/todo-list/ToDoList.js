@@ -1,85 +1,76 @@
 import { useState } from 'react';
 import './style.css';
+import { componentMainDivStyle } from '../../css-class-constant/component-style';
 
 const ToDoList = () => {
-  const [showNewTask, setShowNewTask] = useState(false);
-  const [currentValue, setCurrentValue] = useState('');
-  const [list, setList] = useState([]);
+  const initialTaskState = {
+    isDone: false,
+    isEditing: false,
+    text: ''
+  }
+  const [currentTask, setCurrentTaskValue] = useState(initialTaskState);
+  const [editedId, setEditedId] = useState(null);
+  const [list, setList] = useState({});
 
-  const handleAddNewTask = (event) => {
+  const handleAddAndEditTask = (event) => {
     event.preventDefault();
-    if(!currentValue.trim()) return;
+    if(!currentTask.text.trim()) return;
     
-    setList([...list,{text:currentValue.trim(), isDone: false, isEditing: false}]);
-    setCurrentValue('');
-    console.log('setList:', list);
+    if(currentTask.isEditing && editedId){
+        setList({...list, [editedId]: {...currentTask, isEditing: false}});
+        setCurrentTaskValue(initialTaskState);
+    } else {
+        setList({...list, [Date.now()]: {...currentTask}});
+        setCurrentTaskValue(initialTaskState);
+        console.log('setList:', {...list, [Date.now()]: {...currentTask}});
+    }
   }
 
-  const removeTask = (index) => {
-    const updatedTask = list.filter((_, i) => i !== index);
-    setList(updatedTask);
+  const removeTask = (id) => {
+    const {[id]:_, ...rest} = list;
+    setList({...rest});
   }
 
-  const toggleEdit = (index) => {
-    const task = [...list];
-    task[index].isEditing =  !task[index].isEditing;
+  const toggleEdit = (text,id) => {
+    const editingTask = list[id];
 
-    setList(task);
+    setCurrentTaskValue({...editingTask, isEditing:true, text});
+    setEditedId(id);
   }
 
-  const editTask = (index, newValue) => {
-    const tasks = [...list];
-    tasks[index].text = newValue;
+  const toggleDone = (key) => {
+    const task = list[key];
+    task.isDone =  !task.isDone;
 
-    setList(tasks);
-  }
-
-  const toggleDone = (index) => {
-    const task = [...list];
-    task[index].isDone =  !task[index].isDone;
-
-    setList(task);
+    setList({...list, [key]: task});
   }
 
   return (
-    <div className='todo-container'>
-          <div className="todo-header">ToDo List</div>
+    <div className={componentMainDivStyle}>
+          <label className="todo-header">ToDo List</label>
           <div className='grid grid-flow-col'>
-            <div className='col-span-1 m-3'>
-              <ul>
-                <li key='addNewTask'><button onClick={() => setShowNewTask(true)}>Add Task </button></li>
-              </ul>
-            </div>
             <div className='col-span-3 text-start m-3'>
-              <label>List</label>
               <div>
-                {showNewTask && 
-                  <form onSubmit={handleAddNewTask}>
+                  <form 
+                    onSubmit={handleAddAndEditTask} 
+                    className='text-center border border-blue-800 rounded-lg w-3/4 m-auto bg-blue-100 flex justify-between p-1 focus:border-4 relative'>
                     <input 
+                      required
                       type='text' 
-                      value={currentValue} 
-                      onChange={e => setCurrentValue(e.target.value)}
-                      className='border border-blue-800 rounded-lg'/>  
-                    <button type='submit' className='m-2'>Add</button>
+                      value={currentTask.text} 
+                      onChange={e => setCurrentTaskValue({...currentTask, text: e.target.value})}
+                      placeholder='Please add your task.'
+                      className='focus:ring-blue-500 focus:border-blue-500 w-full relative p-2'
+                    />  
+                    <button type='submit'             
+                      className='absolute end-2.5 text-white focus:outline-none font-semibold rounded-lg text-sm px-4 py-2 bg-green-600 hover:bg-green-700 my-0.5'
+                    >{currentTask.isEditing ? 'Update' : 'Add+'}</button>
                   </form>
-                }
-                <ul className='text-start items-start'>
-                  {list && list.map((value, index) =>
-                    (
-                      value.isEditing ? 
-                      (
-                        <li key={index}>
-                          <input 
-                            type='text' 
-                            value={value.text}
-                            onChange={(event) => editTask(index, event.target.value)}
-                            className='border border-blue-800 rounded-md'/>
-                          <button onClick={() => toggleEdit(index)}>Update</button>
-                        </li>
-                      ) : (
-                        <li key={index} className='flex justify-between'> 
+                <ul className='text-start items-start w-3/4 m-auto my-4'>
+                  {list && Object.entries(list).map(([key, value]) => (
+                        <li key={key} className='flex justify-between'> 
                           <span
-                            onClick={() => toggleDone(index)}
+                            onClick={() => toggleDone(key)}
                             style={{
                               textDecoration: value.isDone ? 'line-through' : 'none',
                               cursor: 'pointer',
@@ -89,11 +80,11 @@ const ToDoList = () => {
                               {value.text} 
                           </span>
                           <div>
-                            <button onClick={() => toggleEdit(index)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Edit</button>
-                            <button onClick={() => removeTask(index)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Remove</button>
+                            <button onClick={() => toggleEdit(value.text, key)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Edit</button>
+                            <button onClick={() => removeTask(key)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Remove</button>
                           </div>
                         </li>
-                    ))
+                    )
                   )}
                 </ul>
               </div>

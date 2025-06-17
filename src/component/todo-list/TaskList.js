@@ -1,8 +1,9 @@
 import React from 'react'
+import { componentMainDivStyle } from '../../css-class-constant/component-style'
 
 const TaskList = () => {
   return (
-    <div>TaskList</div>
+    <div className={componentMainDivStyle}>TaskList</div>
   )
 }
 

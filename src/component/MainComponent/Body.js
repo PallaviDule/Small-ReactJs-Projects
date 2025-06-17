@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 // with tailwindcss: "m-1 p-1 border border-gray-400 rounded-[10px] w-[150px] h-[50px] flex items-center justify-center text-center"
 const tabStyle = {
   margin: '10px',
-  padding: '2px',
+  padding: '3px',
   border: '1px solid gray',
   borderRadius: '10px',
-  width: '150px',
+  width: '170px',
   height: '50px',
   display: 'flex',
   justifyContent: "center", // horizontally center
   alignItems: "center",      // vertically center
   backgroundColor: '#dbeafe',
-  font: 'bold'
+  fontWeight: 'bold',
+  fontSize: '16px'
 }
 
 
