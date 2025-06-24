@@ -5,7 +5,9 @@ import { componentMainDivStyle } from '../../css-class-constant/component-style'
 const TicTacToe = () => {
   return (
     <div className={componentMainDivStyle}>
-      <label className='text-xl font-bold'> Tic Tac Toe</label>
+      <div className='text-3xl font-bold p-2 m-2'> 
+        <label className='border-b border-b-blue-800'>Tic Tac Toe </label>
+      </div>
       <Board />
     </div>
   )

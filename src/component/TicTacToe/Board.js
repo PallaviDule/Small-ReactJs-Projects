@@ -16,7 +16,7 @@ const Square = ({value, onClick}) => {
 
   return (
     <div 
-        className='w-20 h-15 border border-blue-800'
+        className='w-20 h-15 border border-blue-800 items-center content-center font-bold text-2xl hover:bg-blue-300'
         onClick= {onClick}
     >
       {value}
@@ -64,20 +64,20 @@ const Board = () => {
     };
 
     return (
-        <div>
-        <div>
+    <div>
+        <div className="my-5">
             { winner ? 
                 (winner === 'DRAW' ? <h1>Game is draw.</h1> : <h1>Winner is {winner}</h1>) :
                 <label>Next is {isXNext ? 'X' : 'O'} turn</label> 
         }</div>      
-        <div className='m-auto grid grid-cols-3 w-60 my-4'>
+        <div className='m-auto grid grid-cols-3 w-60 my-5 border border-blue-800'>
             {squares.map((square, index) => 
                 <Square value={square} onClick={() => handleOnClick(index)} key={index}/>
             )}
         </div>
-        <div>
+        <div className="text-end mx-10">
             <button 
-                className="border"
+                className="border rounded-2xl p-2 my-5 bg-radial from-blue-400 to-blue-700 text-white  hover:bg-white"
                 onClick={handleResetGame}
             >Reset</button>
         </div>

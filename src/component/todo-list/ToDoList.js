@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './style.css';
 import { componentMainDivStyle } from '../../css-class-constant/component-style';
+import TaskList from './TaskList';
 
 const ToDoList = () => {
   const initialTaskState = {
@@ -47,7 +48,7 @@ const ToDoList = () => {
 
   return (
     <div className={componentMainDivStyle}>
-          <label className="todo-header">ToDo List</label>
+          <div className='text-3xl font-bold p-2 m-2'> ToDo List</div>
           <div className='grid grid-flow-col'>
             <div className='col-span-3 text-start m-3'>
               <div>
@@ -66,27 +67,11 @@ const ToDoList = () => {
                       className='absolute end-2.5 text-white focus:outline-none font-semibold rounded-lg text-sm px-4 py-2 bg-green-600 hover:bg-green-700 my-0.5'
                     >{currentTask.isEditing ? 'Update' : 'Add+'}</button>
                   </form>
-                <ul className='text-start items-start w-3/4 m-auto my-4'>
-                  {list && Object.entries(list).map(([key, value]) => (
-                        <li key={key} className='flex justify-between'> 
-                          <span
-                            onClick={() => toggleDone(key)}
-                            style={{
-                              textDecoration: value.isDone ? 'line-through' : 'none',
-                              cursor: 'pointer',
-                              marginRight: '10px',
-                            }}
-                          > 
-                              {value.text} 
-                          </span>
-                          <div>
-                            <button onClick={() => toggleEdit(value.text, key)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Edit</button>
-                            <button onClick={() => removeTask(key)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Remove</button>
-                          </div>
-                        </li>
-                    )
-                  )}
-                </ul>
+                  {list && 
+                    <TaskList
+                      taskList={list}
+                    />
+                  }
               </div>
             </div>
           </div>
