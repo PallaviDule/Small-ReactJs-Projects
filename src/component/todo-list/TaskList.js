@@ -1,8 +1,17 @@
-import React from 'react'
-import { componentMainDivStyle } from '../../css-class-constant/component-style'
+const TaskList = ({taskList, setTaskList, toggleEdit}) => {
+    const removeTask = (id) => {
+        const {[id]:_, ...rest} = taskList;
+        setTaskList({...rest});
+    }
 
-const TaskList = ({taskList}) => {
-  return (
+    const toggleDone = (key) => {
+        const task = taskList[key];
+        task.isDone =  !task.isDone;
+
+        setTaskList({...taskList, [key]: task});
+    }
+
+    return (
         <ul className='text-start items-start w-3/4 m-auto my-4'>
             {
                 Object.entries(taskList).map(([key, value]) => (
@@ -23,8 +32,8 @@ const TaskList = ({taskList}) => {
                     </div>
                 </li>
             ))}
-    </ul>
-  )
+        </ul>
+    )
 }
 
 export default TaskList

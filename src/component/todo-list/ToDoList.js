@@ -27,23 +27,11 @@ const ToDoList = () => {
     }
   }
 
-  const removeTask = (id) => {
-    const {[id]:_, ...rest} = list;
-    setList({...rest});
-  }
-
   const toggleEdit = (text,id) => {
     const editingTask = list[id];
 
     setCurrentTaskValue({...editingTask, isEditing:true, text});
     setEditedId(id);
-  }
-
-  const toggleDone = (key) => {
-    const task = list[key];
-    task.isDone =  !task.isDone;
-
-    setList({...list, [key]: task});
   }
 
   return (
@@ -70,6 +58,8 @@ const ToDoList = () => {
                   {list && 
                     <TaskList
                       taskList={list}
+                      setTaskList = {setList}
+                      toggleEdit = {toggleEdit}
                     />
                   }
               </div>
