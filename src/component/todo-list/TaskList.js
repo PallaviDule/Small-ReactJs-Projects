@@ -1,3 +1,5 @@
+import { RiDeleteBin5Line, RiEditBoxLine } from "react-icons/ri";
+
 const TaskList = ({taskList, setTaskList, toggleEdit}) => {
     const removeTask = (id) => {
         const {[id]:_, ...rest} = taskList;
@@ -27,8 +29,12 @@ const TaskList = ({taskList, setTaskList, toggleEdit}) => {
                         {value.text} 
                     </span>
                     <div>
-                    <button onClick={() => toggleEdit(value.text, key)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Edit</button>
-                    <button onClick={() => removeTask(key)} className='border border-blue-800 rounded-lg m-1 p-1 text-end text-xs'>Remove</button>
+                    <button onClick={() => toggleEdit(value.text, key)} className='m-1 p-1'>
+                        <RiEditBoxLine size={20} />
+                    </button>
+                    <button onClick={() => removeTask(key)} className='m-1 p-1'>
+                        <RiDeleteBin5Line size={20}/>
+                    </button>
                     </div>
                 </li>
             ))}
