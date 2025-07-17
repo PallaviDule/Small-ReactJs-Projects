@@ -11,6 +11,7 @@ import UseRefDemo from './component/useRefDemo/UseRefDemo';
 import RomanToInteger from './component/romanToInteger/RomanToInteger';
 import CharacterCounter from './component/characterCounter/CharacterCounter';
 import ToDoList from './component/todo-list/ToDoList';
+import Flag from './component/flag/Flag';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="romanToInteger" element={<RomanToInteger />} />
           <Route path="charCounter" element={<CharacterCounter />} />
           <Route path="toDoList" element={<ToDoList />} />
+          <Route path="showFlag" element={<Flag />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

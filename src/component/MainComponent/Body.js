@@ -27,6 +27,7 @@ const Body = () => {
         <div style={tabStyle}><Link to='/romanToInteger'>Roman To Integer</Link></div>
         <div style={tabStyle}><Link to='/charCounter'>Character Counter</Link></div>
         <div style={tabStyle}><Link to='/toDoList'>ToDo List</Link></div>
+        <div style={tabStyle}><Link to='/showFlag'>Flag</Link></div>
     </div>
   )
 }
