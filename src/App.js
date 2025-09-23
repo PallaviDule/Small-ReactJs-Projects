@@ -12,6 +12,7 @@ import RomanToInteger from './component/romanToInteger/RomanToInteger';
 import CharacterCounter from './component/characterCounter/CharacterCounter';
 import ToDoList from './component/todo-list/ToDoList';
 import Flag from './component/flag/Flag';
+import SearchList from './component/searchInList/SearchList';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="charCounter" element={<CharacterCounter />} />
           <Route path="toDoList" element={<ToDoList />} />
           <Route path="showFlag" element={<Flag />} />
+          <Route path="search" element={<SearchList />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

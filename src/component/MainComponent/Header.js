@@ -16,9 +16,16 @@ const headerClass = {
 
 const Header = () => {
   return (
-    <div style={style} className='border-b-5 border-b-cyan-300 bg-blue-950 shadow-2xl items-center'>
-        <div className='text-white mx-3 text-xl'><Link to='/'>Home</Link></div>
-        <div style={headerClass} className='text-white mx-3 text-3xl'>React.js Projects</div>
+    <div className='sticky top-0 z-30 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 shadow-lg border-b-4 border-cyan-400'>
+      <div className='h-16 flex items-center justify-between px-6'>
+        <Link to='/' className='text-white text-xl font-semibold hover:text-cyan-300 transition-colors duration-300 hover:scale-105 transform'>
+          Home
+        </Link>
+        <div className='text-white text-2xl sm:text-3xl font-bold tracking-wide'>
+          React.js Projects
+        </div>
+        <div className='w-16'></div> {/* Spacer for centering */}
+      </div>
     </div>
   )
 }
