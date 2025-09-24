@@ -31,12 +31,12 @@ const Body = () => {
               <span className="inline-block h-3 w-3 rounded-sm bg-sky-500"></span>
               Apps
             </h2>
-            <div className="hidden sm:block h-px flex-1 ml-4 bg-gradient-to-r from-sky-300 to-transparent" />
+            <div className="hidden sm:block h-px flex-1 ml-4 bg-gradient-to-r from-sky-500 to-transparent" />
           </div>
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {apps.map((app) => (
               <Link key={app.to} to={app.to} className="group">
-                <div className="h-32 rounded-2xl border border-sky-200 bg-sky-50/80 backdrop-blur transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-sky-50 flex flex-col overflow-hidden">
+                <div className="h-32 rounded-2xl border border-sky-200 bg-sky-50/80 backdrop-blur transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-sky-100 flex flex-col overflow-hidden">
                   <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                     <div className="flex items-center justify-between">
                       <h3 className="text-base sm:text-lg font-semibold text-slate-800">
@@ -68,7 +68,7 @@ const Body = () => {
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {learning.map((app) => (
               <Link key={app.to} to={app.to} className="group">
-                <div className="h-32 rounded-2xl border border-indigo-200 bg-indigo-50/80 backdrop-blur transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-indigo-50 flex flex-col overflow-hidden">
+                <div className="h-32 rounded-2xl border border-indigo-200 bg-indigo-50/80 backdrop-blur transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-indigo-100 flex flex-col overflow-hidden">
                   <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                     <div className="flex items-center justify-between">
                       <h3 className="text-base sm:text-lg font-semibold text-slate-800">
