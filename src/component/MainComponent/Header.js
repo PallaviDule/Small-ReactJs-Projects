@@ -22,7 +22,7 @@ const Header = () => {
           Home
         </Link>
         <div className='text-white text-2xl sm:text-3xl font-bold tracking-wide'>
-          React.js Projects
+        React Learnings Playground
         </div>
         <div className='w-16'></div> {/* Spacer for centering */}
       </div>
