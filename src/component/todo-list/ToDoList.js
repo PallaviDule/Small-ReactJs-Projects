@@ -35,35 +35,31 @@ const ToDoList = () => {
   }
 
   return (
-    <div className={componentMainDivStyle}>
-          <div className='text-3xl font-bold p-2 m-2'> ToDo List</div>
-          <div className='grid grid-flow-col'>
-            <div className='col-span-3 text-start m-3'>
-              <div>
-                  <form 
-                    onSubmit={handleAddAndEditTask} 
-                    className='text-center border border-blue-800 rounded-lg w-3/4 m-auto bg-blue-100 flex justify-between p-1 focus:border-4 relative'>
-                    <input 
-                      required
-                      type='text' 
-                      value={currentTask.text} 
-                      onChange={e => setCurrentTaskValue({...currentTask, text: e.target.value})}
-                      placeholder='Please add your task.'
-                      className='focus:ring-blue-500 focus:border-blue-500 w-full relative p-2'
-                    />  
-                    <button type='submit'             
-                      className='absolute end-2.5 text-white focus:outline-none font-semibold rounded-lg text-sm px-4 py-2 bg-green-600 hover:bg-green-700 my-0.5'
-                    >{currentTask.isEditing ? 'Update' : 'Add+'}</button>
-                  </form>
-                  {list && 
-                    <TaskList
-                      taskList={list}
-                      setTaskList = {setList}
-                      toggleEdit = {toggleEdit}
-                    />
-                  }
-              </div>
-            </div>
+    <div className={`${componentMainDivStyle} todo-container`}>
+          <div className='todo-header'>ToDo List</div>
+          <div className='todo-body'>
+              <form 
+                onSubmit={handleAddAndEditTask} 
+                className='todo-form'>
+                <input 
+                  required
+                  type='text' 
+                  value={currentTask.text} 
+                  onChange={e => setCurrentTaskValue({...currentTask, text: e.target.value})}
+                  placeholder='Please add your task.'
+                  className='todo-input'
+                />  
+                <button type='submit' className={`todo-submit ${currentTask.isEditing ? 'update' : 'add'}`}>
+                  {currentTask.isEditing ? 'Update' : 'Add'}
+                </button>
+              </form>
+              {list && 
+                <TaskList
+                  taskList={list}
+                  setTaskList = {setList}
+                  toggleEdit = {toggleEdit}
+                />
+              }
           </div>
     </div>
   )

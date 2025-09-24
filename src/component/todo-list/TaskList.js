@@ -8,37 +8,46 @@ const TaskList = ({taskList, setTaskList, toggleEdit}) => {
 
     const toggleDone = (key) => {
         const task = taskList[key];
-        task.isDone =  !task.isDone;
-
-        setTaskList({...taskList, [key]: task});
+        const updatedTask = { ...task, isDone: !task.isDone };
+        setTaskList({ ...taskList, [key]: updatedTask });
     }
 
     return (
-        <ul className='text-start items-start w-3/4 m-auto my-4'>
+        <div className='todo-list-wrap'>
+        <ul className='todo-list'>
             {
-                Object.entries(taskList).map(([key, value]) => (
-                <li key={key} className='flex justify-between'> 
-                    <span
-                        onClick={() => toggleDone(key)}
-                        style={{
-                            textDecoration: value.isDone ? 'line-through' : 'none',
-                            cursor: 'pointer',
-                            marginRight: '10px',
-                        }}
-                    > 
-                        {value.text} 
-                    </span>
-                    <div>
-                    <button onClick={() => toggleEdit(value.text, key)} className='m-1 p-1'>
-                        <RiEditBoxLine size={20} />
-                    </button>
-                    <button onClick={() => removeTask(key)} className='m-1 p-1'>
-                        <RiDeleteBin5Line size={20}/>
-                    </button>
-                    </div>
+                Object.entries(taskList)
+                .sort(([_aId, a], [_bId, b]) => {
+                    if (a.isDone !== b.isDone) {
+                        return a.isDone ? 1 : -1; // uncompleted first
+                    }
+                    return (a.text || '').localeCompare((b.text || ''), undefined, { sensitivity: 'base' });
+                })
+                .map(([key, value]) => (
+                <li key={key} className={`flex justify-between items-center todo-item ${value.isDone ? 'completed' : ''}`}> 
+                    <label className='flex items-center cursor-pointer gap-2 task-label'>
+                        <input
+                            type='checkbox'
+                            className='task-checkbox'
+                            checked={Boolean(value.isDone)}
+                            onChange={() => toggleDone(key)}
+                        />
+                        <span className='task-text'>
+                            {value.text}
+                        </span>
+                    </label>
+                    <div className='todo-actions inline'>
+                        <button onClick={() => toggleEdit(value.text, key)} className='action-btn edit' title='Edit task'>
+                            <RiEditBoxLine size={18} />
+                        </button>
+                        <button onClick={() => removeTask(key)} className='action-btn delete' title='Remove task'>
+                            <RiDeleteBin5Line size={18}/>
+                        </button>
+                        </div>
                 </li>
             ))}
         </ul>
+        </div>
     )
 }
 
