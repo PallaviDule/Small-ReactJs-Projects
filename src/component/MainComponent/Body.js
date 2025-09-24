@@ -18,7 +18,7 @@ const learning = allItems.filter(i => i.kind === 'learning');
 const Body = () => {
   return (
     <div className="min-h-[calc(100dvh-64px)] w-full ">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:py-14">
         <section className="text-center">
           <p className="mt-2 text-slate-600 text-sm sm:text-base md:text-lg">
           A collection of mini apps and hook demos. Click any card to explore.
