@@ -1,0 +1,326 @@
+[
+    {
+      "name": "Pizza Hut",
+      "id": "21001",
+      "areaName": "Shivajinagar",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Pizzas"
+      ],
+      "avgRating": 4.2,
+      "totalRatingsString": "12K+",
+      "slaString": "25-30 mins",
+      "lastMileTravelString": "2.1 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/1a74ecfe-ccf6-43b8-9288-eb91319bdce8_21001.jpg"
+    },
+    {
+      "name": "La Pino'z Pizza",
+      "id": "485330",
+      "areaName": "F.C. Road",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Pizzas",
+        "Pastas",
+        "Italian",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4.1,
+      "totalRatingsString": "2.6K+",
+      "slaString": "15-20 mins",
+      "lastMileTravelString": "2.1 km",
+      "cloudinaryImageId": "kkhxj0otcsgziyt7vnl5"
+    },
+    {
+      "name": "Subway",
+      "id": "5624",
+      "areaName": "Prabhat Road",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "sandwich",
+        "Salads",
+        "wrap",
+        "Healthy Food"
+      ],
+      "avgRating": 4.3,
+      "totalRatingsString": "18K+",
+      "slaString": "15-20 mins",
+      "lastMileTravelString": "2.5 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/21/9dfcdbda-20e7-4e4a-9755-573b500fc81f_5624.JPG"
+    },
+    {
+      "name": "McDonald's",
+      "id": "506982",
+      "areaName": "Shaniwar Peth",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Burgers",
+        "Beverages",
+        "Cafe",
+        "Desserts"
+      ],
+      "avgRating": 4.6,
+      "totalRatingsString": "2.2K+",
+      "slaString": "10-15 mins",
+      "lastMileTravelString": "1.3 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/20/3691ba43-0620-449e-8608-515bcbe69622_506982.jpg"
+    },
+    {
+      "name": "KFC",
+      "id": "243625",
+      "areaName": "Deccan Gymkhana",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Burgers",
+        "Rolls & Wraps",
+        "Fast Food"
+      ],
+      "avgRating": 4.3,
+      "totalRatingsString": "3.6K+",
+      "slaString": "15-20 mins",
+      "lastMileTravelString": "2.1 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/4c1906b4-f727-434b-8496-a2e669269dde_243625.JPG"
+    },
+    {
+      "name": "Domino's Pizza",
+      "id": "456986",
+      "areaName": "Rasta Peth",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Pizzas",
+        "Italian",
+        "Pastas",
+        "Desserts"
+      ],
+      "avgRating": 4.1,
+      "totalRatingsString": "1.1K+",
+      "slaString": "20-25 mins",
+      "lastMileTravelString": "1.7 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/13/12fa947c-5a8a-468d-aa30-cf5c51849f2d_456986.JPG"
+    },
+    {
+      "name": "SP's Biryani House",
+      "id": "20058",
+      "areaName": "Sadashiv Peth",
+      "costForTwo": "₹900 for two",
+      "cuisines": [
+        "Biryani",
+        "Indian",
+        "Maharashtrian"
+      ],
+      "avgRating": 4.5,
+      "totalRatingsString": "25K+",
+      "slaString": "15-20 mins",
+      "lastMileTravelString": "2.0 km",
+      "cloudinaryImageId": "b2jeywla2n5b8h25ey1p"
+    },
+    {
+      "name": "Grameen Kulfi",
+      "id": "386630",
+      "areaName": "Shivaji Nagar",
+      "costForTwo": "₹120 for two",
+      "cuisines": [
+        "Ice Cream",
+        "Desserts"
+      ],
+      "avgRating": 4.7,
+      "totalRatingsString": "333",
+      "slaString": "10-15 mins",
+      "lastMileTravelString": "0.7 km",
+      "cloudinaryImageId": "lxckywk7psobloagbpl7"
+    },
+    {
+      "name": "Burger King",
+      "id": "42581",
+      "areaName": "Shivajinagar",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "avgRating": 4.1,
+      "totalRatingsString": "13K+",
+      "slaString": "30-35 mins",
+      "lastMileTravelString": "4.4 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/13/5b0f452a-c311-4871-8d83-8a3c55494caf_42581.jpg"
+    },
+    {
+      "name": "Samudra Veg",
+      "id": "11887",
+      "areaName": "Erandwane",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Chinese",
+        "South Indian"
+      ],
+      "avgRating": 4.5,
+      "totalRatingsString": "49K+",
+      "slaString": "20-25 mins",
+      "lastMileTravelString": "3.8 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/5/6/d0807ef7-cc68-4cca-8032-c9eb44c9925e_11887.jpg"
+    },
+    {
+      "name": "LeanCrust Pizza- ThinCrust Experts",
+      "id": "681553",
+      "areaName": "Bund Garden Road",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "Pizzas",
+        "Italian",
+        "Desserts"
+      ],
+      "avgRating": 4.6,
+      "totalRatingsString": "383",
+      "slaString": "20-30 mins",
+      "lastMileTravelString": "3.6 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/30/2ca81c32-58e9-41e1-9d30-c336512c6827_681553.jpg"
+    },
+    {
+      "name": "MOJO Pizza - 2X Toppings",
+      "id": "622143",
+      "areaName": "Koregaon Park",
+      "costForTwo": "₹250 for two",
+      "cuisines": [
+        "Pizzas",
+        "Italian",
+        "Fast Food",
+        "Desserts"
+      ],
+      "avgRating": 4.5,
+      "totalRatingsString": "598",
+      "slaString": "20-30 mins",
+      "lastMileTravelString": "3.6 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/12/5869160b-6a3d-4e14-933a-26ecd11635dd_622143.jpg"
+    },
+    {
+      "name": "Largo Pizzeria",
+      "id": "693690",
+      "areaName": "Kothrud",
+      "costForTwo": "₹600 for two",
+      "cuisines": [
+        "Pizzas"
+      ],
+      "avgRating": 4,
+      "totalRatingsString": "206",
+      "slaString": "20-25 mins",
+      "lastMileTravelString": "2.3 km",
+      "cloudinaryImageId": "1d1b64136e79e319e83857551fcb098f"
+    },
+    {
+      "name": "Le Plaisir",
+      "id": "5297",
+      "areaName": "Kothrud",
+      "costForTwo": "₹1000 for two",
+      "cuisines": [
+        "European"
+      ],
+      "avgRating": 4.7,
+      "totalRatingsString": "21K+",
+      "slaString": "20-25 mins",
+      "lastMileTravelString": "2.6 km",
+      "cloudinaryImageId": "jiiy0xlkxs9zmt8nqbbp"
+    },
+    {
+      "name": "TIAN The Oriental Kitchen",
+      "id": "795818",
+      "areaName": "Law College Road",
+      "costForTwo": "₹700 for two",
+      "cuisines": [
+        "Chinese",
+        "Seafood",
+        "Japanese",
+        "Desserts",
+        "Salads",
+        "Beverages"
+      ],
+      "avgRating": 4.7,
+      "totalRatingsString": "344",
+      "slaString": "20-25 mins",
+      "lastMileTravelString": "3.0 km",
+      "cloudinaryImageId": "7e390c6421d50c4c1619ec08019711ef"
+    },
+    {
+      "name": "Dum Safar Biryani",
+      "id": "639449",
+      "areaName": "DECCAN MALL",
+      "costForTwo": "₹500 for two",
+      "cuisines": [
+        "Biryani",
+        "Kebabs",
+        "Tandoor",
+        "Indian",
+        "Desserts"
+      ],
+      "avgRating": 4.1,
+      "totalRatingsString": "339",
+      "slaString": "15-20 mins",
+      "lastMileTravelString": "2.1 km",
+      "cloudinaryImageId": "fx0dti223czabpykykua"
+    },
+    {
+      "name": "Barbeque Nation",
+      "id": "305794",
+      "areaName": "Deccan Gymkhana",
+      "costForTwo": "₹600 for two",
+      "cuisines": [
+        "Barbecue",
+        "Biryani",
+        "Kebabs",
+        "Mughlai",
+        "Desserts"
+      ],
+      "avgRating": 4.1,
+      "totalRatingsString": "1.6K+",
+      "slaString": "25-30 mins",
+      "lastMileTravelString": "2.1 km",
+      "cloudinaryImageId": "eizjdmngzyna4mp0xmwm"
+    },
+    {
+      "name": "Eatsome- Wraps & Rolls",
+      "id": "29639",
+      "areaName": "Shivajinagar",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "Rolls & Wraps",
+        "Street Food",
+        "Beverages"
+      ],
+      "avgRating": 4.5,
+      "totalRatingsString": "6.3K+",
+      "slaString": "15-20 mins",
+      "lastMileTravelString": "1.7 km",
+      "cloudinaryImageId": "e56240a4b58956f47a5a1f8392470fbe"
+    },
+    {
+      "name": "Madinah",
+      "id": "5743",
+      "areaName": "Camp",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Mughlai",
+        "North Indian",
+        "Chinese",
+        "Biryani"
+      ],
+      "avgRating": 4.1,
+      "totalRatingsString": "27K+",
+      "slaString": "25-30 mins",
+      "lastMileTravelString": "3.0 km",
+      "cloudinaryImageId": "n07bhbglbqthyd45clul"
+    },
+    {
+      "name": "Baskin Robbins - Ice Cream Desserts",
+      "id": "820738",
+      "areaName": "DMH COMPLEX",
+      "costForTwo": "₹250 for two",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "avgRating": 4.8,
+      "totalRatingsString": "72",
+      "slaString": "10-15 mins",
+      "lastMileTravelString": "1.8 km",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/2/12/1d1a18ce-901c-4d3b-8067-03947829f29c_820738.jpg"
+    }
+  ]

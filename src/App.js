@@ -13,6 +13,7 @@ import CharacterCounter from './component/characterCounter/CharacterCounter';
 import ToDoList from './component/todo-list/ToDoList';
 import Flag from './component/flag/Flag';
 import SearchList from './component/searchInList/SearchList';
+import FoodApp from './component/foodApp/FoodApp';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="toDoList" element={<ToDoList />} />
           <Route path="showFlag" element={<Flag />} />
           <Route path="search" element={<SearchList />} />
+          <Route path="foodApp" element={<FoodApp />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

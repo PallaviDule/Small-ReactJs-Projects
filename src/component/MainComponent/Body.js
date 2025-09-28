@@ -10,6 +10,7 @@ const allItems = [
   { to: '/toDoList', title: 'ToDo List', desc: 'CRUD with local component state', kind: 'app' },
   { to: '/showFlag', title: 'Flag', desc: 'Conditional rendering exercise', kind: 'app' },
   { to: '/search', title: 'Search Logic', desc: 'Filter and list rendering', kind: 'app' },
+  { to: '/foodApp', title: 'Food App', desc: 'Trying to create food app with redux toolkit', kind: 'app' },
 ];
 
 const apps = allItems.filter(i => i.kind === 'app');
