@@ -4,21 +4,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import useOnlineStatus from '../utils/useOnlinestatus';
 import RestaurantCard from './RestaurantCard';
+import { ShimmerCard } from './ShimmerCard';
 
 const StyledLink = styled(Link)`
 text-decoration: none;
 color: black;
 `
-
-export const ShimmerCard = () => {
-    return (
-        <div className = 'shimmer-card flex flex-wrap justify-between'>
-            {[1,2,3,4,5,6,7,8,9,10].map((index) => 
-                <div className='place-container m-1 w-[265px] h-100 bg-gray-100 hover:bg-amber-50 rounded-lg p-1' key={index}></div>
-            )}
-        </div>
-    )
- }
 
 const RestaurantsComponent = () => {
     const [list, setList] = useState([]);
@@ -93,7 +84,7 @@ const RestaurantsComponent = () => {
             <div className='flex flex-wrap justify-between'>
                 {list.length === 0 ? (<ShimmerCard />) : 
                     (filteredList.map(rs =>
-                        <StyledLink to={`/foodApp/restaurantMenu/${rs.info.id}`}>
+                        <StyledLink to={`/foodApp/restaurantMenu/${rs.info.id}`} key={rs.info.id}>
                             <RestaurantCard info={rs.info} key={rs.info.id}/>
                         </StyledLink>)
                 )}

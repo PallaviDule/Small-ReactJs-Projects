@@ -14,6 +14,11 @@ import ToDoList from './component/todo-list/ToDoList';
 import Flag from './component/flag/Flag';
 import SearchList from './component/searchInList/SearchList';
 import FoodApp from './component/foodApp/FoodApp';
+import RestaurantsComponent from './component/foodApp/components/RestaurantsComponent';
+import AboutUs from './component/foodApp/components/AboutUs';
+import UserParent from './component/foodApp/components/UserParent';
+import RestaurantPage from './component/foodApp/components/RestaurantPage';
+import Cart from './component/foodApp/components/Cart';
 
 const App = () => {
   return (
@@ -29,7 +34,13 @@ const App = () => {
           <Route path="toDoList" element={<ToDoList />} />
           <Route path="showFlag" element={<Flag />} />
           <Route path="search" element={<SearchList />} />
-          <Route path="foodApp" element={<FoodApp />} />
+          <Route path="foodApp" element={<FoodApp />} >
+            <Route index element={<RestaurantsComponent />} />
+            <Route path="about" element={<AboutUs />} />
+            <Route path="user" element={<UserParent />} />
+            <Route path="restaurantMenu/:resId" element={<RestaurantPage />} />
+            <Route path="cart" element={<Cart />} />
+          </Route>
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
