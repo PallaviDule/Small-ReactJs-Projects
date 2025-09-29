@@ -1,4 +1,4 @@
-export const ShimmerCard = () => {
+const ShimmerCard = () => {
     return (
         <div className = 'shimmer-card flex flex-wrap justify-between'>
             {[1,2,3,4,5,6,7,8,9,10].map((index) => 
@@ -7,3 +7,5 @@ export const ShimmerCard = () => {
         </div>
     )
  };
+
+ export default ShimmerCard;

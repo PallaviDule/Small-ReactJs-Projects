@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import { ShimmerCard } from './RestaurantsComponent';
 import { Link, useParams } from 'react-router-dom';
 import useRestaurantsMenu from '../utils/useRestaurantsMenu';
 import FoodCategory from './FoodCategory';
+import ShimmerCard from './ShimmerCard';
 
 const RestaurantPage = () => {
     //const [resInfo, setResInfo] = useState(null);

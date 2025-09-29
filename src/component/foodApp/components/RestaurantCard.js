@@ -4,7 +4,7 @@ const RestaurantCard = (props) => {
     const {name, cuisines, avgRating, costForTwo, sla: {slaString}, cloudinaryImageId, areaName} = props.info;
     return (
         <div 
-            className='place-container m-1 w-[265px] h-80 hover:bg-amber-50 p-1' 
+            className='place-container m-1 w-full h-90 hover:bg-amber-50 p-1 hover:scale-105' 
             key={name}
             data-testid='restaurant-card'
         >

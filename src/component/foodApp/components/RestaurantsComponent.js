@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import useOnlineStatus from '../utils/useOnlinestatus';
 import RestaurantCard from './RestaurantCard';
-import { ShimmerCard } from './ShimmerCard';
+import ShimmerCard from './ShimmerCard';
 
 const StyledLink = styled(Link)`
 text-decoration: none;
@@ -42,6 +42,7 @@ const RestaurantsComponent = () => {
         const data = await fetch(SWIGGY_RESTAURANT_LIST_URL); 
         const result = await data.json();
         const mappedResponse = result.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+        console.log('gridElements' , result.data.cards[1].card.card.gridElements);
 
         setList(mappedResponse);
         setFilteredList(mappedResponse);
@@ -81,7 +82,7 @@ const RestaurantsComponent = () => {
                     <button className='border bg-gray-100 rounded-2xl px-4' onClick={handleClearFilter}>Clear Filter</button>
                 </div>
             </div>
-            <div className='flex flex-wrap justify-between'>
+            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3 mx-auto">
                 {list.length === 0 ? (<ShimmerCard />) : 
                     (filteredList.map(rs =>
                         <StyledLink to={`/foodApp/restaurantMenu/${rs.info.id}`} key={rs.info.id}>
