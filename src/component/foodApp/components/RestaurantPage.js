@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import { Link, useParams } from 'react-router-dom';
+import {useState} from 'react';
+import { useParams } from 'react-router-dom';
 import useRestaurantsMenu from '../utils/useRestaurantsMenu';
 import FoodCategory from './FoodCategory';
 import ShimmerCard from './ShimmerCard';
@@ -9,19 +9,6 @@ const RestaurantPage = () => {
     const {resId} = useParams();
     const resInfo = useRestaurantsMenu(resId);
     const[showIndex, setShowIndex] = useState('0');
-
-    
-    // let's move this to make custom hook
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5204303&lng=73.8567437&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
-    //         const result = await data.json();
-
-    //         setResInfo(result?.data);
-    //     }
-    //     fetchData();
-
-    // }, []);
 
     if(resInfo === null) {
         return (<ShimmerCard />);

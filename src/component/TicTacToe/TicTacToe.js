@@ -1,16 +1,16 @@
-import React from 'react';
 import Board from './Board';
-import { componentMainDivStyle } from '../../css-class-constant/component-style';
 
 const TicTacToe = () => {
   return (
-    <div className={componentMainDivStyle}>
-      <div className='text-3xl font-bold p-2 m-2'> 
-        <label className='border-b border-b-blue-800'>Tic Tac Toe </label>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+      <div className="flex items-center gap-4 mb-8">
+        <h1 className="text-5xl font-extrabold text-blue-800 tracking-wide px-8 py-4 border-b-4 border-blue-500">
+          Tic Tac Toe
+        </h1>
       </div>
       <Board />
     </div>
-  )
-}
+  );
+};
 
 export default TicTacToe;
