@@ -4,34 +4,60 @@ import { componentMainDivStyle } from '../../css-class-constant/component-style'
 
 const RomanToInteger = () => {
     const [value, setValue] = useState('');
-    const [convertedValue , setConvertedValue] = useState('');
-    const convertRomanToInteger = (romNum) => {
-        let romanTonumber = convertRomanValueToInteger(romNum);
+    const [convertedValue, setConvertedValue] = useState('');
+    const [error, setError] = useState('');
 
-        if(romanTonumber!= 0) setConvertedValue(romanTonumber);
+    const convertRomanToInteger = (romNum) => {
+        setError('');
+        setConvertedValue('');
+        if (!romNum.trim()) {
+            setError('Please enter a Roman numeral.');
+            return;
+        }
+        let romanTonumber = convertRomanValueToInteger(romNum.trim().toUpperCase());
+        if (romanTonumber !== 0) {
+            setConvertedValue(romanTonumber);
+        } else {
+            setError('Invalid Roman numeral.');
+        }
     }
 
     return (
-        <div className={`${componentMainDivStyle} flex flex-col`} >
-            <label className='text-xl font-bold mb-4 border-b border-b-blue-800'>Roman To Integer</label>
-            <input 
-                className='border border-blue-800 hover:bg-blue-50 my-2 h-10 text-center rounded-md'
-                type='text'
-                value = {value}
-                onChange={(event) => setValue(event.target.value)}
-                placeholder='Type Roman Number Here'
-            />
-            <button 
-                className='border border-blue-800 w-30 m-auto my-5 rounded-2xl px-4 py-2 bg-blue-200 hover:bg-blue-300'
-                onClick={() => convertRomanToInteger(value)}>Convert</button>
-            <input 
-                className='border-2 border-blue-800 my-2 h-10 disabled:bg-blue-200 text-center rounded-md'
-                type='text'
-                value = {convertedValue}
-                onChange={(event) => setConvertedValue(event.target.value)}
-                disabled = {true}
-                placeholder='Converted Integer Value'
-            />
+        <div className="min-h-screen bg-gradient-to-br from-blue-200 via-white to-blue-100">
+            {/* Header at the top, visually separated */}
+            <header className="w-full flex flex-col items-center pt-10 pb-4">
+                <h1 className="text-2xl font-extrabold text-blue-900 tracking-wide border-b-4 border-blue-700 p-3 mb-8 bg-white/90 rounded-xl shadow-lg max-w-xl w-full text-center">
+                    Roman To Integer Converter
+                </h1>
+            </header>
+            {/* Card below header */}
+            <div className="w-full flex flex-col items-center">
+                <div className="w-full max-w-lg flex flex-col items-center bg-white/80 rounded-2xl shadow-lg p-8 mt-2">
+                    <input 
+                        className='border-2 border-blue-400 focus:border-blue-700 focus:ring-1 focus:ring-blue-200 transition-all duration-150 my-2 h-12 w-full text-center rounded-lg text-lg shadow placeholder-gray-400 placeholder-italic'
+                        type='text'
+                        value={value}
+                        onChange={(event) => setValue(event.target.value)}
+                        placeholder='Type Roman Numeral (e.g. XIV)'
+                        autoFocus
+                    />
+                    <button 
+                        className='mt-4 mb-2 px-8 py-2 rounded-full bg-gradient-to-r from-blue-400 to-blue-700 text-white font-semibold shadow hover:from-blue-700 hover:to-blue-400 transition-all duration-200'
+                        onClick={() => convertRomanToInteger(value)}>
+                        Convert
+                    </button>
+                    {error && (
+                        <div className="text-red-600 font-medium mt-2 mb-2">{error}</div>
+                    )}
+                    <input 
+                        className='border-2 border-blue-400 my-2 h-12 w-full text-center rounded-lg text-lg bg-blue-100 text-blue-900 font-bold shadow'
+                        type='text'
+                        value={convertedValue}
+                        disabled
+                        placeholder='Converted Integer Value'
+                    />
+                </div>
+            </div>
         </div>
     )
 }
